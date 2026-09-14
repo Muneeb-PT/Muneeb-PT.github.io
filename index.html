@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b0d10" />
+
+    <title>Mohammed Muneeb PT — Software Engineer</title>
+    <meta
+      name="description"
+      content="Mohammed Muneeb PT — B.Tech CSE student at KMEA Engineering College, building toward AI infrastructure and backend engineering. Projects, stack, and leadership experience."
+    />
+    <meta name="author" content="Mohammed Muneeb PT" />
+    <link rel="canonical" href="https://muneeb-pt.github.io/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Mohammed Muneeb PT" />
+    <meta property="og:title" content="Mohammed Muneeb PT — Software Engineer" />
+    <meta
+      property="og:description"
+      content="B.Tech CSE student building toward AI infrastructure and backend engineering. Projects, stack, and leadership experience."
+    />
+    <meta property="og:url" content="https://muneeb-pt.github.io/" />
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/247439067?v=4" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Mohammed Muneeb PT — Software Engineer" />
+    <meta
+      name="twitter:description"
+      content="B.Tech CSE student building toward AI infrastructure and backend engineering."
+    />
+    <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/247439067?v=4" />
+
+    <!--
+      Person structured data. This is what actually helps search
+      engines understand that the GitHub, LinkedIn, Instagram and
+      Facebook profiles below all belong to the same person as this
+      site — update the "sameAs" list any time a handle changes.
+    -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mohammed Muneeb PT",
+        "url": "https://muneeb-pt.github.io/",
+        "image": "https://avatars.githubusercontent.com/u/247439067?v=4",
+        "jobTitle": "Computer Science Engineering Student",
+        "alumniOf": "KMEA Engineering College",
+        "address": {
+          "@type": "PostalAddress",
+          "addressRegion": "Kerala",
+          "addressCountry": "IN"
+        },
+        "sameAs": [
+          "https://github.com/Muneeb-PT",
+          "https://www.linkedin.com/in/mohammed-muneeb-pt",
+          "https://www.instagram.com/mohammed_muneeb_pt",
+          "https://www.facebook.com/share/19UAkcJsvG/",
+          "https://tinkerhub.org/@muneebpt"
+        ]
+      }
+    </script>
+
+    <script>
+      // Pairs with public/404.html: GitHub Pages has no server-side
+      // routing, so a deep link or hard refresh to e.g. /work 404s.
+      // 404.html stashes the intended path and bounces here; this
+      // restores it via history.replaceState before React Router
+      // reads the URL, so the correct route renders on first paint.
+      (function () {
+        var redirect = sessionStorage.getItem("spa-redirect");
+        sessionStorage.removeItem("spa-redirect");
+        if (redirect && redirect !== location.pathname + location.search + location.hash) {
+          history.replaceState(null, "", redirect);
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

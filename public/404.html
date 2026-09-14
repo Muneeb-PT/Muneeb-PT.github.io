@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Mohammed Muneeb PT</title>
+    <script>
+      // GitHub Pages serves static files only, so a hard refresh or
+      // shared deep link (e.g. /work) has no matching file and lands
+      // here. Stash the intended path and bounce to the real app —
+      // index.html restores it before React Router mounts.
+      var path = location.pathname + location.search + location.hash;
+      sessionStorage.setItem("spa-redirect", path);
+      location.replace(location.origin + "/");
+    </script>
+  </head>
+  <body></body>
+</html>
