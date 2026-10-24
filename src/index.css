@@ -181,3 +181,32 @@ img, svg { display: block; max-width: 100%; }
   }
   .reveal-ready .reveal:not(.is-visible) { opacity: 1; transform: none; }
 }
+
+/* Fine-pointer micro-interactions: restrained depth, localized light, no layout shift. */
+.project-card::after {
+  background: radial-gradient(
+    circle at var(--spot-x, 12%) var(--spot-y, 8%),
+    rgba(232, 163, 61, .11),
+    transparent 62%
+  );
+}
+.project-card.pointer-tilt:hover,
+.leadership-card.pointer-tilt:hover {
+  transform:
+    perspective(900px)
+    rotateX(var(--tilt-y, 0deg))
+    rotateY(var(--tilt-x, 0deg))
+    translateY(-4px);
+  will-change: transform;
+}
+.project-card.pointer-tilt::after { opacity: 1; }
+.project-card, .leadership-card { transform-style: preserve-3d; }
+button, a { transition-timing-function: cubic-bezier(.2, .7, .2, 1); }
+button:active, a:active { transition-duration: .08s; }
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: .22s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card.pointer-tilt:hover,
+  .leadership-card.pointer-tilt:hover { transform: none; }
+}
+
