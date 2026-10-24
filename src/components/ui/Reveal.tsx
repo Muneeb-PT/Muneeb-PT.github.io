@@ -1,4 +1,4 @@
-import { useEffect, useRef, type ReactNode } from "react";
+import { useEffect, useRef, type ReactNode, type CSSProperties } from "react";
 import { useReducedMotion } from "../../hooks/useReducedMotion";
 
 type RevealProps = {
@@ -41,7 +41,7 @@ export function Reveal({ children, className = "", delay = 0 }: RevealProps) {
     <div
       ref={ref}
       className={`reveal ${className}`}
-      style={{ "--reveal-delay": `${delay}ms` } as React.CSSProperties}
+      style={{ "--reveal-delay": `${delay}ms` } as CSSProperties}
     >
       {children}
     </div>
