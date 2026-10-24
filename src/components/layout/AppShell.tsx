@@ -15,10 +15,11 @@ export function AppShell() {
       <a href="#main" className="skip-link">
         Skip to content
       </a>
+      <div className="ambient-field" aria-hidden="true" />
       <ScrollProgress />
       <NavRail />
       <div className="min-h-screen pt-16 md:pl-(--rail-w) md:pt-0">
-        <main id="main">
+        <main id="main" key={pathname} className="page-enter">
           <Outlet />
         </main>
       </div>
