@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import type { CSSProperties } from "react";
 import { ArrowUpRight } from "lucide-react";
 import type { Project } from "../../data/projects";
 import { Chip } from "./Primitives";
@@ -11,7 +12,7 @@ const statusColor: Record<Project["status"], string> = {
 
 export function ProjectCard({ project, compact = false, delay = 0 }: { project: Project; compact?: boolean; delay?: number }) {
   return (
-    <article className="project-card relative overflow-hidden rounded-lg border border-border bg-raised/85 p-5 backdrop-blur-sm" style={{ "--card-delay": `${delay}ms` } as React.CSSProperties}>
+    <article className="project-card relative overflow-hidden rounded-lg border border-border bg-raised/85 p-5 backdrop-blur-sm" style={{ "--card-delay": `${delay}ms` } as CSSProperties}>
       <span aria-hidden className={clsx("project-accent absolute left-0 top-0 h-full w-[3px]", statusColor[project.status])} />
       <div className="mb-3 flex items-center justify-between gap-3">
         <span className="font-mono text-[11px] text-text-dim">/{project.slug}</span>
