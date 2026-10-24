@@ -88,6 +88,11 @@ img, svg { display: block; max-width: 100%; }
 }
 .skip-link:focus { left: 20px; top: 20px; }
 
+.nav-link { transition: color .25s ease, transform .25s cubic-bezier(.2,.7,.2,1); }
+@media (hover: hover) and (pointer: fine) {
+  .nav-link:hover { transform: translateX(3px); }
+}
+.mobile-menu-panel { animation: menu-enter .28s cubic-bezier(.2,.7,.2,1) both; }
 .page-enter { animation: page-enter .55s cubic-bezier(.2,.7,.2,1) both; }
 .reveal { opacity: 1; transform: none; }
 .reveal-ready .reveal:not(.is-visible) {
