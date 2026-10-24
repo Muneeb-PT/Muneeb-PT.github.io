@@ -78,7 +78,7 @@ img, svg { display: block; max-width: 100%; }
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 80% 8%, rgba(232,163,61,.08), transparent 42%);
+  background: radial-gradient(ellipse 34rem 26rem at var(--pointer-x, 80%) var(--pointer-y, 8%), rgba(232,163,61,.075), transparent 75%);
   animation: ambient-drift 16s ease-in-out infinite alternate;
 }
 .skip-link {
