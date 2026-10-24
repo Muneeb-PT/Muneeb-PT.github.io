@@ -14,14 +14,14 @@ export interface Project {
 export const projects: readonly Project[] = [
   {
     slug: "hospital-management-system",
-    name: "Smart Hospital Management System",
+    name: "MediNexus — Smart Hospital Management System",
     description:
-      "Java · priority-queue triage engine, Strategy & Observer patterns, JDBC/MySQL, JavaFX GUI.",
+      "Java · JavaFX/FXML · JDBC/MySQL · role-based access · appointment prioritisation · OOP design patterns.",
     longDescription:
-      "A Java mini-project for the OOPs course: a priority-queue triage engine deciding who gets seen next, built with Strategy and Observer patterns, JDBC/MySQL for persistence, and a JavaFX/Swing interface on top.",
-    tags: ["Java", "JDBC", "MySQL", "JavaFX", "OOP"],
+      "A desktop hospital-management application built as a Java OOP project. It includes role-based workflows for administrators, doctors, receptionists, and patients; appointment prioritisation; database-backed records using JDBC and MySQL; identity-verification workflows; and supporting modules for notifications, payments, and medicine inventory. The project has a packaged Windows installer and an automated test suite; clean-install and cross-machine validation remain important release checks.",
+    tags: ["Java", "JavaFX", "FXML", "JDBC", "MySQL", "RBAC", "JUnit"],
     status: "in-progress",
-    statusLabel: "in progress",
+    statusLabel: "release validation",
     featured: true,
   },
   {
