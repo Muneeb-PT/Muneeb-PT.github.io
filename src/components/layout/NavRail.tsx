@@ -61,7 +61,7 @@ function NavList({ onNavigate }: { onNavigate?: () => void }) {
             onClick={onNavigate}
             className={({ isActive }) =>
               clsx(
-                "group relative flex items-center gap-3 rounded-md px-2 py-2.5 text-[13.5px] transition-colors",
+                "nav-link group relative flex items-center gap-3 rounded-md px-2 py-2.5 text-[13.5px] transition-colors",
                 isActive ? "text-text" : "text-text-muted hover:text-text",
               )
             }
@@ -160,7 +160,7 @@ export function NavRail() {
 
       {/* Mobile sheet */}
       {open && (
-        <div className="fixed inset-0 top-16 z-30 flex flex-col bg-bg px-5 py-7 md:hidden">
+        <div className="mobile-menu-panel fixed inset-0 top-16 z-30 flex flex-col bg-bg px-5 py-7 md:hidden">
           <nav aria-label="Primary">
             <NavList onNavigate={() => setOpen(false)} />
           </nav>
