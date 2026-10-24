@@ -2,6 +2,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { NavRail } from "./NavRail";
 import { ScrollProgress } from "./ScrollProgress";
+import { InteractiveEffects } from "../ui/InteractiveEffects";
 
 export function AppShell() {
   const { pathname } = useLocation();
@@ -17,6 +18,7 @@ export function AppShell() {
       </a>
       <div className="ambient-field" aria-hidden="true" />
       <ScrollProgress />
+      <InteractiveEffects />
       <NavRail />
       <div className="min-h-screen pt-16 md:pl-(--rail-w) md:pt-0">
         <main id="main" key={pathname} className="page-enter">
