@@ -159,6 +159,7 @@ img, svg { display: block; max-width: 100%; }
   .leadership-card:hover { transform: translateY(-3px); border-color: var(--accent-line); background-color: rgba(20,23,27,.96); }
   .social-pill:hover { transform: translateY(-2px); border-color: var(--accent-line); color: var(--accent); }
 }
+@keyframes menu-enter { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes hero-rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes orbit-float { from { transform: translate3d(-6px, 0, 0) rotate(-24deg); } to { transform: translate3d(12px, 9px, 0) rotate(-19deg); } }
 @keyframes scan-line { 0%, 100% { transform: translateX(-110%); } 55% { transform: translateX(320%); } }
