@@ -67,5 +67,5 @@ export function InteractiveEffects() {
     };
   }, []);
 
-  return <div className="interactive-spotlight" aria-hidden="true" />;
+  return null;
 }
