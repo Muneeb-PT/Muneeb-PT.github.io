@@ -9,12 +9,12 @@ export interface TimelineEntry {
 export const timeline: readonly TimelineEntry[] = [
   {
     hash: "a91f3c",
-    title: "Class Representative",
-    date: "Jan 2026 – Present",
-    org: "KMEA Engineering College · Aluva, Kerala",
+    title: "ACE Representative — S3 CSE-A",
+    date: "2026 – Present",
+    org: "Association of Computer Science & Engineering · KMEA Engineering College",
     points: [
-      "Sole academic liaison between a 60-student CSE cohort and faculty — course updates, schedule conflicts, exam-scheduling pushback",
-      "Organized peer study sessions and coordinated the batch's participation in department events",
+      "Represent the S3 CSE-A student cohort in association and department activities",
+      "Support communication, coordination, and student participation in academic and technical events",
     ],
   },
   {
@@ -25,6 +25,16 @@ export const timeline: readonly TimelineEntry[] = [
     points: [
       "Directed a four-member team from idea to working prototype",
       "Owned the personalized learning-path logic and the accessibility requirements",
+    ],
+  },
+  {
+    hash: "5e8b2d",
+    title: "Executive Member",
+    date: "2026 – Present",
+    org: "SKSSF Perinthalmanna Cluster Committee",
+    points: [
+      "Contribute to student-organisation coordination and committee activities",
+      "Progressed through campus-wing and unit-level responsibilities, including Unit General Secretary and Working Secretary roles",
     ],
   },
   {
@@ -89,7 +99,7 @@ export const leadershipPages = [
     name: "SKSSF",
     fullName: "Samastha Kerala Sunni Students Federation",
     unit: "Manathmangalam Unit · Perinthalmanna Cluster",
-    blurb: "General Secretary to Working Secretary — organizational leadership and community fundraising.",
+    blurb: "Organizational leadership across campus-wing, unit, and cluster-level responsibilities.",
     accent: "#d7b56d",
   },
 ];
