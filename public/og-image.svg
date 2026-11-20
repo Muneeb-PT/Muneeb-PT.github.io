@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs><radialGradient id="glow" cx="82%" cy="8%" r="75%"><stop offset="0" stop-color="#e8a33d" stop-opacity=".16"/><stop offset="1" stop-color="#0b0d10" stop-opacity="0"/></radialGradient></defs>
+  <rect width="1200" height="630" fill="#0b0d10"/><rect width="1200" height="630" fill="url(#glow)"/>
+  <path d="M0 510H1200" stroke="#262b31"/><path d="M80 0V630M1120 0V630" stroke="#1b1f24"/>
+  <rect x="80" y="86" width="58" height="58" rx="13" fill="#14171b" stroke="#3b3325"/><text x="109" y="126" text-anchor="middle" font-family="monospace" font-size="31" font-weight="700" fill="#e8a33d">m</text>
+  <text x="80" y="226" font-family="monospace" font-size="18" letter-spacing="5" fill="#e8a33d">MOHAMMED MUNEEB PT</text>
+  <text x="80" y="322" font-family="Arial, sans-serif" font-size="66" font-weight="700" fill="#eaedef">Building ideas into</text>
+  <text x="80" y="402" font-family="Arial, sans-serif" font-size="66" font-weight="700" fill="#e8a33d">working software.</text>
+  <text x="80" y="466" font-family="Arial, sans-serif" font-size="24" fill="#9aa1a9">B.Tech Computer Science &amp; Engineering · Kerala, India</text>
+  <text x="80" y="570" font-family="monospace" font-size="18" fill="#858d96">SOFTWARE ENGINEERING  /  BACKEND  /  AI &amp; ML</text>
+</svg>
