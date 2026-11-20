@@ -12,7 +12,7 @@ import { usePageMeta } from "../hooks/usePageMeta";
 
 export default function Home() {
   usePageMeta(
-    "Mohammed Muneeb PT — Software Engineer",
+    "Mohammed Muneeb PT — CSE Student | Software & AI/ML",
     "Mohammed Muneeb PT — B.Tech CSE student at KMEA Engineering College, building practical software and exploring backend engineering and AI/ML.",
   );
 
