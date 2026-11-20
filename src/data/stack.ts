@@ -5,15 +5,15 @@ export interface StackGroup {
 
 export const stackGroups: readonly StackGroup[] = [
   {
-    title: "Languages",
-    items: ["C++", "Python", "C", "Java (in progress)", "SQL"],
+    title: "Programming languages",
+    items: ["C++", "Python", "C", "Java (actively learning)", "SQL"],
   },
   {
     title: "Web development",
-    items: ["HTML5", "CSS3", "JavaScript"],
+    items: ["HTML5", "CSS3", "JavaScript", "React"],
   },
   {
-    title: "AI/ML & backend ecosystem",
+    title: "Backend & AI project technologies",
     items: ["FastAPI", "LangChain", "Celery", "Redis"],
   },
   {
@@ -21,8 +21,8 @@ export const stackGroups: readonly StackGroup[] = [
     items: ["Git", "GitHub", "MySQL", "VS Code"],
   },
   {
-    title: "Core concepts",
-    items: ["Data Structures & Algorithms", "OOP", "ML fundamentals", "Prompt engineering"],
+    title: "Foundations I'm developing",
+    items: ["Data Structures & Algorithms", "OOP", "Machine Learning fundamentals", "Prompt engineering"],
   },
 ];
 
@@ -30,9 +30,9 @@ export const glanceStack = [
   "Python",
   "C++",
   "Java",
-  "FastAPI",
-  "LangChain",
+  "JavaScript",
   "React",
+  "FastAPI",
   "MySQL",
   "Git & GitHub",
 ];
