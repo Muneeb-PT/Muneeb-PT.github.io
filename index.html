@@ -3,46 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preload" href="/assets/" as="fetch" crossorigin="anonymous" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#0b0d10" />
+    <meta name="color-scheme" content="dark light" />
 
-    <title>Mohammed Muneeb PT — CSE Student | Software & AI/ML</title>
-    <meta
-      name="description"
-      content="Portfolio of Mohammed Muneeb PT, a B.Tech Computer Science student at KMEA Engineering College. Explore software projects, technical interests, learning progress, and leadership experience."
-    />
+    <title>Mohammed Muneeb PT — Software Engineering & AI/ML</title>
+    <meta name="description" content="Portfolio of Mohammed Muneeb PT, a B.Tech CSE student at KMEA Engineering College. Selected software projects, technical interests, learning journey, and community leadership." />
     <meta name="author" content="Mohammed Muneeb PT" />
+    <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://muneeb-pt.github.io/" />
 
-    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Mohammed Muneeb PT" />
-    <meta property="og:title" content="Mohammed Muneeb PT — CSE Student | Software & AI/ML" />
-    <meta
-      property="og:description"
-      content="B.Tech CSE student at KMEA Engineering College, building practical software and exploring backend engineering and AI/ML."
-    />
+    <meta property="og:title" content="Mohammed Muneeb PT — Software Engineering & AI/ML" />
+    <meta property="og:description" content="B.Tech CSE student building practical software and developing foundations in software engineering, backend systems, and AI/ML." />
     <meta property="og:url" content="https://muneeb-pt.github.io/" />
-    <meta property="og:image" content="https://avatars.githubusercontent.com/u/247439067?v=4" />
+    <meta property="og:image" content="https://muneeb-pt.github.io/og-image.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Mohammed Muneeb PT — Building ideas into working software." />
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Mohammed Muneeb PT — CSE Student | Software & AI/ML" />
-    <meta
-      name="twitter:description"
-      content="B.Tech CSE student building practical software and developing foundations in software engineering, backend systems, and AI/ML."
-    />
-    <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/247439067?v=4" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mohammed Muneeb PT — Software Engineering & AI/ML" />
+    <meta name="twitter:description" content="B.Tech CSE student building practical software and developing foundations in software engineering, backend systems, and AI/ML." />
+    <meta name="twitter:image" content="https://muneeb-pt.github.io/og-image.svg" />
 
-    <!-- Structured data for a student portfolio. sameAs helps search engines
-         associate the linked profiles; it does not guarantee a knowledge panel. -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Mohammed Muneeb PT",
         "url": "https://muneeb-pt.github.io/",
-        "image": "https://avatars.githubusercontent.com/u/247439067?v=4",
+        "image": "https://muneeb-pt.github.io/og-image.svg",
         "jobTitle": "Computer Science Engineering Student",
         "alumniOf": {
           "@type": "CollegeOrUniversity",
@@ -64,16 +57,16 @@
     </script>
 
     <script>
-      // Pairs with public/404.html: GitHub Pages has no server-side
-      // routing, so a deep link or hard refresh to e.g. /work 404s.
-      // 404.html stashes the intended path and bounces here; this
-      // restores it via history.replaceState before React Router
-      // reads the URL, so the correct route renders on first paint.
+      // Restore the intended route after GitHub Pages' 404 fallback.
       (function () {
-        var redirect = sessionStorage.getItem("spa-redirect");
-        sessionStorage.removeItem("spa-redirect");
-        if (redirect && redirect !== location.pathname + location.search + location.hash) {
-          history.replaceState(null, "", redirect);
+        try {
+          var redirect = sessionStorage.getItem("spa-redirect");
+          sessionStorage.removeItem("spa-redirect");
+          if (redirect && redirect !== location.pathname + location.search + location.hash) {
+            history.replaceState(null, "", redirect);
+          }
+        } catch (error) {
+          // A blocked storage API must never prevent the app from mounting.
         }
       })();
     </script>
