@@ -5,12 +5,15 @@ import { credentials, timeline } from "../data/journey";
 import { projects } from "../data/projects";
 import { stackGroups } from "../data/stack";
 import "../resume-print.css";
+import { usePageMeta } from "../hooks/usePageMeta";
 
 const selectedProjects = projects.filter((project) =>
   ["hospital-management-system", "autodoc-ai", "weather-app"].includes(project.slug),
 );
 
 export default function Resume() {
+  usePageMeta("Résumé — Mohammed Muneeb PT", "Print-ready résumé of Mohammed Muneeb PT, B.Tech CSE student at KMEA Engineering College.");
+
   return (
     <main className="resume-page mx-auto my-8 w-full max-w-[850px] px-6 py-8 sm:px-10 print:my-0 print:px-0 print:py-0">
       <div className="no-print mb-6 flex flex-wrap items-center justify-between gap-3">
