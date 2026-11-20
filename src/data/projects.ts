@@ -9,6 +9,7 @@ export interface Project {
   status: ProjectStatus;
   statusLabel: string;
   featured: boolean;
+  repositoryUrl?: string;
 }
 
 export const projects: readonly Project[] = [
@@ -23,6 +24,7 @@ export const projects: readonly Project[] = [
     status: "in-progress",
     statusLabel: "release validation",
     featured: true,
+    repositoryUrl: "https://github.com/Muneeb-PT/MediNexus",
   },
   {
     slug: "autodoc-ai",
@@ -35,6 +37,7 @@ export const projects: readonly Project[] = [
     status: "shipped",
     statusLabel: "team project",
     featured: true,
+    repositoryUrl: "https://github.com/Muneeb-PT/AutoDoc-AI",
   },
   {
     slug: "buildx26-edtech",
@@ -57,6 +60,7 @@ export const projects: readonly Project[] = [
     status: "shipped",
     statusLabel: "shipped",
     featured: false,
+    repositoryUrl: "https://github.com/Muneeb-PT/Weather_App",
   },
   {
     slug: "whatsapp-web-replica",
@@ -68,6 +72,7 @@ export const projects: readonly Project[] = [
     status: "shipped",
     statusLabel: "shipped",
     featured: false,
+    repositoryUrl: "https://github.com/Muneeb-PT/add-on_class_profile",
   },
 ] as const;
 
