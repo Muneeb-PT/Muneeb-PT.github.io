@@ -67,6 +67,6 @@ The project has an automated test suite and a packaged Windows installer. Earlie
 - Conduct accessibility, privacy, backup/restore and security reviews.
 - Do not use real patient data in demonstrations.
 
-## Source
+## Visual evidence\n\nThe repository currently contains branding assets but no verified screenshots of the running JavaFX interface. A real application screenshot should be captured from the packaged build and added here before presenting the project with visual UI evidence. The background and logo assets are intentionally not presented as application screenshots.\n\n## Source
 
 [GitHub repository](https://github.com/Muneeb-PT/MediNexus)
