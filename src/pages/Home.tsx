@@ -1,4 +1,5 @@
-import { ArrowUpRight, Code2, Sparkles } from "lucide-react";
+import { ArrowUpRight, Check, Code2, Copy, Sparkles } from "lucide-react";
+import { useState } from "react";
 import { Terminal } from "../components/ui/Terminal";
 import { Button, Chip, SectionHead } from "../components/ui/Primitives";
 import { ProjectCard } from "../components/ui/ProjectCard";
@@ -9,6 +10,26 @@ import { featuredProjects } from "../data/projects";
 import { glanceStack } from "../data/stack";
 import { leadershipPages } from "../data/journey";
 import { usePageMeta } from "../hooks/usePageMeta";
+
+function CopyEmailButton() {
+  const [copied, setCopied] = useState(false);
+
+  async function copyEmail() {
+    try {
+      await navigator.clipboard.writeText(profile.email);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 1800);
+    } catch {
+      window.location.href = `mailto:${profile.email}`;
+    }
+  }
+
+  return (
+    <button type="button" onClick={copyEmail} className="inline-flex min-h-11 items-center gap-2 rounded-md border border-border px-4 py-2.5 font-mono text-[12px] text-text-muted transition-colors hover:border-accent-line hover:text-accent" aria-live="polite">
+      {copied ? <><Check size={14} /> Copied!</> : <><Copy size={14} /> Copy email</>}
+    </button>
+  );
+}
 
 export default function Home() {
   usePageMeta(
@@ -113,7 +134,8 @@ export default function Home() {
             <p className="mb-3 font-mono text-[12px] uppercase tracking-[.2em] text-accent">connect / 04</p>
             <h2 className="mb-4 text-[30px] sm:text-[36px]">Have a good problem? <span className="text-text-dim">Let's solve it.</span></h2>
             <p className="mb-8 max-w-[56ch] text-[15.5px] text-text-muted">Software engineering internships, open-source collaborations, or just talking through a gnarly bug — my inbox is open.</p>
-            <div className="mb-8"><Button href={`mailto:${profile.email}`}>{profile.email} <ArrowUpRight className="ml-1 inline" size={14} /></Button></div>
+            <div className="mb-4 flex flex-wrap items-center gap-3"><Button href={`mailto:${profile.email}`}>Email me <ArrowUpRight className="ml-1 inline" size={14} /></Button><CopyEmailButton /></div>
+            <p className="mb-8 font-mono text-[12px] text-text-dim">{profile.email}</p>
             <div className="flex flex-wrap gap-2">
               {social.map((s) => <a key={s.handle} href={s.href} target="_blank" rel="noopener noreferrer" className="social-pill rounded-md border border-border px-3.5 py-2 font-mono text-[12px] text-text-muted">{s.label}<ArrowUpRight className="ml-1 inline" size={12} /></a>)}
             </div>
