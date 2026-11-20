@@ -18,7 +18,7 @@ export const projects: readonly Project[] = [
     description:
       "Java · JavaFX/FXML · JDBC/MySQL · role-based access · appointment prioritisation · OOP design patterns.",
     longDescription:
-      "A desktop hospital-management application built as a Java OOP project. It includes role-based workflows for administrators, doctors, receptionists, and patients; appointment prioritisation; database-backed records using JDBC and MySQL; identity-verification workflows; and supporting modules for notifications, payments, and medicine inventory. The project has a packaged Windows installer and an automated test suite; clean-install and cross-machine validation remain important release checks.",
+      "A desktop hospital-management application developed for a Java OOP project. It brings together role-based workflows for administrators, doctors, receptionists, and patients; appointment prioritisation; and database-backed records using JDBC and MySQL. Supporting modules include identity-verification workflows, notifications, payments, and medicine inventory. The project has a packaged Windows installer and an automated test suite. It is an academic project, not certified clinical software, and still needs broader installation testing outside the development environment.",
     tags: ["Java", "JavaFX", "FXML", "JDBC", "MySQL", "RBAC", "JUnit"],
     status: "in-progress",
     statusLabel: "release validation",
@@ -28,9 +28,9 @@ export const projects: readonly Project[] = [
     slug: "autodoc-ai",
     name: "AutoDoc AI",
     description:
-      "FastAPI + LangChain pipeline that generates READMEs, API docs, and architecture diagrams from a repo.",
+      "Team-built AI documentation tool for generating project documentation from a GitHub repository.",
     longDescription:
-      "An AI documentation generator that points at a GitHub repo and writes the README, API docs, and architecture diagrams that usually go stale first. Built the pipeline end to end — FastAPI serving requests, Celery and Redis handling the heavier generation jobs in the background.",
+      "An AI-assisted documentation project designed to turn a GitHub repository into useful technical documentation, including README content, API documentation, and architecture diagrams. The project uses a FastAPI service with a LangChain-based generation workflow; Celery and Redis support background processing. It was developed as a team project, so the technologies listed describe the project stack rather than a claim of equal depth in every tool.",
     tags: ["FastAPI", "LangChain", "Celery", "Redis"],
     status: "shipped",
     statusLabel: "team project",
@@ -41,7 +41,7 @@ export const projects: readonly Project[] = [
     name: "BUILDX'26 — AI-Driven EdTech Platform",
     description: "Led a 4-member team to a working AI-driven prototype in a 12-hour hackathon.",
     longDescription:
-      "Led a four-person team to a working prototype in twelve hours, mapping what a learner already knows to the courses, certifications, and jobs that make sense next — with accessibility considered from the first wireframe, not bolted on after.",
+      "Led a four-person team to a working prototype in twelve hours. The idea was to map what a learner already knows to relevant courses, certifications, and possible next-step roles, while considering accessibility from the first wireframe.",
     tags: ["Team lead", "Prototype", "12-hour build"],
     status: "hackathon",
     statusLabel: "hackathon · team lead",
@@ -50,10 +50,10 @@ export const projects: readonly Project[] = [
   {
     slug: "weather-app",
     name: "Weather App",
-    description: "React/Vite weather app, deployed to GitHub Pages.",
+    description: "React/Vite weather app using Open-Meteo, deployed to GitHub Pages.",
     longDescription:
-      "A React/Vite weather app, rebuilt and deployed to GitHub Pages after untangling a broken CI/CD workflow and a Vite base-path bug that kept breaking the live build.",
-    tags: ["React", "Vite", "GitHub Actions", "GitHub Pages"],
+      "A React/Vite weather app that uses Open-Meteo for location search and forecast data. During development, I worked through a broken CI/CD workflow and a Vite base-path issue before deploying it to GitHub Pages.",
+    tags: ["React", "Vite", "Open-Meteo", "GitHub Actions", "GitHub Pages"],
     status: "shipped",
     statusLabel: "shipped",
     featured: false,
@@ -63,7 +63,7 @@ export const projects: readonly Project[] = [
     name: "WhatsApp Web Homepage Replica",
     description: "Responsive front-end replica built during a five-day front-end intensive.",
     longDescription:
-      "A responsive front-end replica of the WhatsApp Web homepage, built during a five-day front-end intensive — first real practice with Git branches and a GitHub-based deploy workflow.",
+      "A responsive front-end recreation of the WhatsApp Web homepage, built during a five-day front-end intensive. It was a practical exercise in HTML, CSS, JavaScript, Git branches, and a GitHub-based deployment workflow.",
     tags: ["HTML", "CSS", "JavaScript", "Git"],
     status: "shipped",
     statusLabel: "shipped",
@@ -74,4 +74,4 @@ export const projects: readonly Project[] = [
 export const featuredProjects = projects.filter((p) => p.featured);
 
 export const earlierWorkNote =
-  "Earlier builds: a themed Diwali webpage and a multi-page school information site — both static HTML/CSS projects shipped via GitHub Pages during coursework.";
+  "Earlier coursework and practice: a themed Diwali webpage and a multi-page school information site, both built with static HTML/CSS and published through GitHub Pages.";
