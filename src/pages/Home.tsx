@@ -60,11 +60,13 @@ export default function Home() {
             </p>
             <div className="flex flex-wrap gap-3">
               <Button href="/work"><span className="inline-flex items-center gap-2">Explore my work <ArrowUpRight size={15} /></span></Button>
+              <Button href="/resume" variant="ghost">View résumé</Button>
               <Button href={`mailto:${profile.email}`} variant="ghost">Get in touch</Button>
             </div>
             <div className="mt-9 flex flex-wrap items-center gap-x-5 gap-y-2 font-mono text-[11px] text-text-dim">
               <span className="inline-flex items-center gap-2"><Code2 size={13} className="text-accent" /> Building in public</span>
               <span className="inline-flex items-center gap-2"><Sparkles size={13} className="text-accent" /> Learning by shipping</span>
+              <a href="https://github.com/Muneeb-PT" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 hover:text-accent">GitHub activity <ArrowUpRight size={12} /></a>
             </div>
           </div>
           <div className="hero-terminal"><Terminal /></div>

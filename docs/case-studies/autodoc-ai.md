@@ -68,3 +68,18 @@ Do not publish invented accuracy, latency or cost numbers. Build a small, repeat
 ## Source
 
 [GitHub repository](https://github.com/Muneeb-PT/AutoDoc-AI)
+
+
+## Interface evidence
+
+The project repository includes these interface screenshots. They are linked from the source repository so the portfolio does not duplicate binary assets.
+
+### Sign-in screen
+
+![AutoDoc AI sign-in screen](https://raw.githubusercontent.com/Muneeb-PT/AutoDoc-AI/main/assets/login.png)
+
+### Main application screen
+
+![AutoDoc AI main application screen](https://raw.githubusercontent.com/Muneeb-PT/AutoDoc-AI/main/assets/home.png)
+
+These screenshots document the interface only; they are not evidence of model accuracy, production usage or service uptime.

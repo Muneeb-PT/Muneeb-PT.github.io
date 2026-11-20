@@ -4,6 +4,7 @@ import { AppShell } from "./components/layout/AppShell";
 import Home from "./pages/Home";
 import Work from "./pages/Work";
 import Journey from "./pages/Journey";
+import Resume from "./pages/Resume";
 import NotFound from "./pages/NotFound";
 
 const MSF = lazy(() => import("./pages/msf/MSF"));
@@ -23,6 +24,7 @@ export default function App() {
           <Route path="/journey" element={<Journey />} />
         </Route>
 
+        <Route path="/resume" element={<Resume />} />
         <Route
           path="/msf"
           element={

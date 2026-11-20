@@ -30,8 +30,29 @@ export default function Work() {
           </section>
         </Reveal>
         <Reveal>
+          <section className="mb-16">
+            <SectionHead eyebrow="skills in practice / 02" title="Evidence behind the stack" />
+            <p className="mb-5 max-w-[64ch] text-[13.5px] leading-relaxed text-text-muted">A technology is listed here with the project context where it appears. Team-project technologies are identified as team work; listing a tool is not a claim of professional mastery.</p>
+            <div className="grid gap-3 sm:grid-cols-2">
+              {[
+                { title: "Java · JavaFX · JDBC · MySQL", detail: "Desktop application, role-aware workflows and relational persistence.", project: "MediNexus", href: "https://github.com/Muneeb-PT/MediNexus", role: "Academic project" },
+                { title: "FastAPI · LangChain · Celery · Redis", detail: "AI-assisted documentation workflow and background processing.", project: "AutoDoc AI", href: "https://github.com/Muneeb-PT/AutoDoc-AI", role: "Team project" },
+                { title: "React · Vite · API integration", detail: "Weather application with location search and forecast data.", project: "Weather App", href: "https://github.com/Muneeb-PT/Weather_App", role: "Personal project" },
+                { title: "HTML · CSS · JavaScript", detail: "Responsive multi-page front-end practice from an intensive programme.", project: "Front-end training work", href: "https://github.com/Muneeb-PT/add-on_class_profile", role: "Training assignment" },
+              ].map((item) => (
+                <article key={item.title} className="rounded-lg border border-border bg-raised/60 p-5">
+                  <p className="mb-2 font-mono text-[10px] uppercase tracking-[.12em] text-accent">{item.role}</p>
+                  <h3 className="mb-2 text-[14px] font-semibold text-text">{item.title}</h3>
+                  <p className="mb-3 text-[13px] leading-relaxed text-text-muted">{item.detail}</p>
+                  <a href={item.href} target="_blank" rel="noopener noreferrer" className="text-[12px] text-text underline decoration-border underline-offset-4 hover:text-accent">{item.project} — view source ↗</a>
+                </article>
+              ))}
+            </div>
+          </section>
+        </Reveal>
+        <Reveal>
           <section>
-            <SectionHead eyebrow="selected builds / 02" title="Projects" />
+            <SectionHead eyebrow="selected builds / 03" title="Projects" />
             <div className="grid gap-4 sm:grid-cols-2">
               {projects.map((project, i) => <ProjectCard key={project.slug} project={project} delay={i * 70} />)}
             </div>

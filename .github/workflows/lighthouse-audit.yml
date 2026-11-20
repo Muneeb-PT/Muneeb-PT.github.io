@@ -1,0 +1,29 @@
+name: Lighthouse audit
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "23 5 * * 1"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: lighthouse-audit
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    name: Audit deployed portfolio
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Lighthouse against GitHub Pages
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          urls: |
+            https://muneeb-pt.github.io/
+            https://muneeb-pt.github.io/work
+            https://muneeb-pt.github.io/journey
+            https://muneeb-pt.github.io/resume
+          uploadArtifacts: true
+          temporaryPublicStorage: true

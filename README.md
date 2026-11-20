@@ -51,7 +51,7 @@ docs/
 public/              Favicon, routing fallback, sitemap and robots file
 ```
 
-## Selected engineering case studies
+## Résumé and contact\n\nThe website includes a print-ready résumé at [muneeb-pt.github.io/resume](https://muneeb-pt.github.io/resume). Use the **Save as PDF** button and review the generated file before sharing. The résumé is assembled from the portfolio data; update those source records when education, projects or credentials change.\n\nThe home page links to the public GitHub profile for repository activity. No third-party contribution graph or unverified activity metric is embedded.\n\n## Selected engineering case studies
 
 - [MediNexus — architecture, role-aware workflows, prioritisation and limitations](docs/case-studies/medinexus.md)
 - [AutoDoc AI — conceptual architecture, evaluation plan and engineering risks](docs/case-studies/autodoc-ai.md)
@@ -85,7 +85,7 @@ The site includes page metadata, Open Graph and Twitter preview tags, a sitemap,
 
 Before sharing the site widely, verify profile links, social previews, canonical URLs and sitemap routes. SVG social previews are not supported consistently by every platform, so validate previews on the platforms where the portfolio will be shared.
 
-## Quality and release validation
+## Quality and release validation\n\nA scheduled/manual Lighthouse workflow audits the deployed home, work, journey and résumé routes. Reports are uploaded as workflow artifacts; scores are measured at run time and can vary between runs. This workflow does not certify WCAG conformance, so keyboard and assistive-technology review remain part of the release checklist.\n
 
 See [Engineering Standards](docs/ENGINEERING_STANDARDS.md) for measurable quality targets and a release checklist. Lighthouse, WCAG and link-check targets are goals until supported by saved audit reports; do not present target scores as measured results.
 
