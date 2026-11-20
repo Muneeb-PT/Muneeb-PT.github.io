@@ -1,0 +1,79 @@
+@page {
+  size: A4;
+  margin: 13mm 14mm;
+}
+
+.resume-page {
+  color: #20252a;
+  background: #fff;
+  border: 1px solid #e2e5e8;
+  border-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.45;
+}
+
+.resume-header { border-color: #20252a; }
+.resume-kicker {
+  color: #98600d;
+  font: 700 9pt/1.2 Arial, Helvetica, sans-serif;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.resume-header h1 { color: #15191d; font-family: Arial, Helvetica, sans-serif; }
+.resume-header > p:not(.resume-kicker), .resume-section p { color: #39434b; }
+.resume-header a, .resume-links a { color: #76500f; text-decoration: underline; text-underline-offset: 2px; }
+.resume-section { margin-top: 19px; break-inside: avoid; }
+.resume-section h2 {
+  margin-bottom: 8px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #cfd4d8;
+  color: #98600d;
+  font: 700 10pt/1.2 Arial, Helvetica, sans-serif;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.resume-row { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.resume-row strong { color: #20252a; }
+.resume-row span { flex: 0 0 auto; color: #68727a; font-size: 9pt; }
+.resume-item { margin-top: 9px; break-inside: avoid; }
+.resume-item p { margin-top: 2px; }
+.resume-item ul { margin: 4px 0 0 17px; list-style: disc; }
+.resume-item li { margin-top: 2px; }
+.resume-links { display: flex; gap: 15px; font-size: 9pt; }
+.resume-skill { margin-top: 4px; }
+.resume-credentials { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 18px; list-style: disc; padding-left: 17px; }
+.resume-credentials span { color: #68727a; }
+.resume-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 20px;
+  padding-top: 8px;
+  border-top: 1px solid #cfd4d8;
+  color: #68727a;
+  font-size: 8pt;
+}
+
+@media print {
+  html, body { background: #fff !important; color: #20252a !important; }
+  body * { visibility: hidden !important; }
+  .resume-page, .resume-page * { visibility: visible !important; }
+  .resume-page {
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: 100%;
+    max-width: none;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 9.5pt;
+  }
+  .no-print { display: none !important; }
+  .resume-section { margin-top: 13px; }
+  .resume-item { margin-top: 6px; }
+  a { color: #20252a !important; text-decoration: none !important; }
+  .resume-footer { margin-top: 14px; }
+}
