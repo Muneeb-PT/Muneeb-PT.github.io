@@ -26,7 +26,12 @@ export function ProjectCard({ project, compact = false, delay = 0 }: { project: 
         {project.tags.map((tag) => <Chip key={tag}>{tag}</Chip>)}
       </div>
       <div className="project-card-footer mt-5 flex items-center justify-between border-t border-border-soft pt-3 font-mono text-[10.5px] uppercase tracking-[.12em] text-text-dim">
-        <span>Project details</span><ArrowUpRight size={14} className="text-accent" />
+        {project.repositoryUrl ? (
+          <a href={project.repositoryUrl} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-8 items-center gap-1.5 rounded-sm text-text-muted hover:text-accent focus-visible:outline-accent" aria-label={`View ${project.name} source code on GitHub`}>
+            View source on GitHub <ArrowUpRight size={13} className="text-accent" />
+          </a>
+        ) : <span>Project overview</span>}
+        {!project.repositoryUrl && <span className="text-text-dim">Details above</span>}
       </div>
     </article>
   );
