@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import type { CSSProperties } from "react";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, BookOpen } from "lucide-react";
 import type { Project } from "../../data/projects";
 import { Chip } from "./Primitives";
 
@@ -25,13 +25,17 @@ export function ProjectCard({ project, compact = false, delay = 0 }: { project: 
       <div className="flex flex-wrap gap-1.5">
         {project.tags.map((tag) => <Chip key={tag}>{tag}</Chip>)}
       </div>
-      <div className="project-card-footer mt-5 flex items-center justify-between border-t border-border-soft pt-3 font-mono text-[10.5px] uppercase tracking-[.12em] text-text-dim">
+      <div className="project-card-footer mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-border-soft pt-3 font-mono text-[10.5px] uppercase tracking-[.12em] text-text-dim">
+        {project.caseStudyUrl && (
+          <a href={project.caseStudyUrl} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-8 items-center gap-1.5 rounded-sm text-text-muted hover:text-accent focus-visible:outline-accent" aria-label={`Read the ${project.name} engineering case study`}>
+            <BookOpen size={13} className="text-accent" /> Case study <ArrowUpRight size={13} />
+          </a>
+        )}
         {project.repositoryUrl ? (
           <a href={project.repositoryUrl} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-8 items-center gap-1.5 rounded-sm text-text-muted hover:text-accent focus-visible:outline-accent" aria-label={`View ${project.name} source code on GitHub`}>
-            View source on GitHub <ArrowUpRight size={13} className="text-accent" />
+            View source <ArrowUpRight size={13} className="text-accent" />
           </a>
         ) : <span>Project overview</span>}
-        {!project.repositoryUrl && <span className="text-text-dim">Details above</span>}
       </div>
     </article>
   );
