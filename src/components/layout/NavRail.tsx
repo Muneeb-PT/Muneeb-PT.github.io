@@ -1,4 +1,4 @@
-import { useState, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import { NavLink } from "react-router-dom";
 import {
   Home,
@@ -91,6 +91,15 @@ function NavList({ onNavigate }: { onNavigate?: () => void }) {
 export function NavRail() {
   const [open, setOpen] = useState(false);
 
+  useEffect(() => {
+    if (!open) return;
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, [open]);
+
   return (
     <>
       {/* Desktop rail */}
@@ -151,6 +160,7 @@ export function NavRail() {
           type="button"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
+          aria-controls="mobile-navigation"
           onClick={() => setOpen((o) => !o)}
           className="grid h-9 w-9 place-items-center rounded-md border border-border text-text"
         >
@@ -160,7 +170,7 @@ export function NavRail() {
 
       {/* Mobile sheet */}
       {open && (
-        <div className="mobile-menu-panel fixed inset-0 top-16 z-30 flex flex-col bg-bg px-5 py-7 md:hidden">
+        <div id="mobile-navigation" className="mobile-menu-panel fixed inset-0 top-16 z-30 flex flex-col bg-bg px-5 py-7 md:hidden" aria-label="Mobile navigation menu">
           <nav aria-label="Primary">
             <NavList onNavigate={() => setOpen(false)} />
           </nav>
