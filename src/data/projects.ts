@@ -10,6 +10,7 @@ export interface Project {
   statusLabel: string;
   featured: boolean;
   repositoryUrl?: string;
+  caseStudyUrl?: string;
 }
 
 export const projects: readonly Project[] = [
@@ -25,6 +26,7 @@ export const projects: readonly Project[] = [
     statusLabel: "release validation",
     featured: true,
     repositoryUrl: "https://github.com/Muneeb-PT/MediNexus",
+    caseStudyUrl: "https://github.com/Muneeb-PT/Muneeb-PT.github.io/blob/main/docs/case-studies/medinexus.md",
   },
   {
     slug: "autodoc-ai",
@@ -38,6 +40,7 @@ export const projects: readonly Project[] = [
     statusLabel: "team project",
     featured: true,
     repositoryUrl: "https://github.com/Muneeb-PT/AutoDoc-AI",
+    caseStudyUrl: "https://github.com/Muneeb-PT/Muneeb-PT.github.io/blob/main/docs/case-studies/autodoc-ai.md",
   },
   {
     slug: "buildx26-edtech",
